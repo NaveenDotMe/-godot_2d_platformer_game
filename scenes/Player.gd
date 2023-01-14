@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal died
+
 var gravity = 1000
 var velocity = Vector2.ZERO
 var maxHorizontalSpeed = 140
@@ -62,4 +64,4 @@ func update_animation():
 	
 
 func on_hazard_area_entered(area2d):
-	print("die")
+	emit_signal("died")
