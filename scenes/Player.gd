@@ -9,7 +9,7 @@ var jumpTerminationMultiplier = 4
 var hasDoubleJump = false
 
 func _ready():
-	pass # Replace with function body.
+	$HazardArea.connect("area_entered", self, "on_hazard_area_entered")
 
 func _process(delta):
 	var moveVector = get_movement_vector()
@@ -59,4 +59,7 @@ func update_animation():
 		
 	if(moveVec.x != 0):
 		$AnimatedSprite.flip_h = true if moveVec.x > 0 else false
+	
 
+func on_hazard_area_entered(area2d):
+	print("die")

@@ -89,5 +89,5 @@ collision_mask = 32768
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -1.17569 )
+position = Vector2( 0, -2.78801 )
 frames = SubResource( 3 )
